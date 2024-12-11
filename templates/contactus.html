@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="../static/css/algo-style.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #1B4242, #092635);
+      
+    }
+    .bdy{
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .contact-container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .contact-header p {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-form .form-group {
+      flex: 1 1 calc(50% - 15px);
+    }
+
+    .contact-form .form-group.full-width {
+      flex: 1 1 100%;
+    }
+
+    .contact-form label {
+      display: block;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .contact-form button {
+      padding: 12px 20px;
+      background: #092635;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #6a11cb;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .contact-details p {
+      margin: 5px 0;
+    }
+
+    .contact-details a {
+      color: #9EC8B9;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .contact-details a:hover {
+      color: #1B4242;
+    }
+    
+  footer {
+      text-align: center;
+      background-color: #1e4242;
+      color: white;
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    
+    
+    <div class="dropdown">
+        <button class="dropbtn">Scheduling Algorithm
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/ScheduLearn/templates/sjf.html">Shortest Job First</a>
+          <a href="/ScheduLearn/templates/fcfs.html">First Come First Serve</a>
+          <a href="/ScheduLearn/templates/round_robin.html">Round Robin</a>
+          <a href="/ScheduLearn/templates/ps.html">Priority Scheduling</a>
+          <a href="/ScheduLearn/templates/ba.html">Banker's Algorithm</a>
+          <a href="/ScheduLearn/templates/mq.html">Multilevel Queue</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn2">Sorting Algorithm
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Bubble Sort</a>
+          <a href="#">Selection Sort</a>
+          <a href="#">Insertion Sort</a>
+          <a href="#">Merge Sort</a>
+          <a href="#">Quick Sort</a>
+          <a href="#">Counting Sort</a>
+        </div>
+    </div>
+    <a href="#">Linked List</a>
+    <a href="#">Graph</a>
+    <a href="#">Tree</a>
+    <a href="/ScheduLearn/templates/contactus.html" style="float:right; margin-right:20px;">Contact</a>
+  </div>
+  <div class="bdy">
+  <div class="contact-container">
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you! Fill out the form below or reach us at our email.</p>
+    </div>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group full-width">
+        <label for="message">Your Message</label>
+        <textarea id="message" placeholder="Write your message here..." required></textarea>
+      </div>
+      <div class="form-group full-width">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+    <div class="contact-details">
+      <p>Email: <a href="mailto:official.bitstream@gmail.com">official.bitstream@gmail.com</a></p>
+    </div>
+  </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 ScheduLearn. All rights reserved.</p>
+</footer>
+</body>
+</html>

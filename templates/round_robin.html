@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Robin Scheduling Algorithm</title>
+    <link rel="stylesheet" href="../static/css/algo-style.css">
+    
+    <!-- Chart.js for performance visualization -->
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Scheduling Algorithm
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="sjf.html">Shortest Job First</a>
+              <a href="fcfs.html">First Come First Serve</a>
+              <a href="round_robin.html">Round Robin</a>
+              <a href="ps.html">Priority Scheduling</a>
+              <a href="ba.html">Banker's Algorithm</a>
+              <a href="mq.html">Multilevel Queue</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn2">Sorting Algorithm
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Bubble Sort</a>
+              <a href="#">Selection Sort</a>
+              <a href="#">Insertion Sort</a>
+              <a href="#">Merge Sort</a>
+              <a href="#">Quick Sort</a>
+              <a href="#">Counting Sort</a>
+            </div>
+        </div>
+        <a href="#">Linked List</a>
+        <a href="#">Graph</a>
+        <a href="#">Tree</a>
+        <a href="#news" style="float:right; margin-right:20px;">Contact</a>
+    </div>
+
+    <div class="container">
+        <!-- Left Panel: Add Process Section -->
+        <div class="panel left">
+            <div id="actions">
+                <div class="addproc">Add Process</div>
+                <div id="add-job-input">
+                    <input type="text" id="job-name" placeholder="Process Name (e.g., P4)">
+                    <input type="number" id="job-arrival" placeholder="Arrival Time (default 0)">
+                    <input type="number" id="job-burst" placeholder="Burst Time">
+                    <input type="number" id="job-priority" placeholder="Time Quantum">
+                    <button id="add-job-btn">Add Job</button>
+                    <button id="simulate-btn">Simulate RR</button>
+                    <button id="start-new-simulation-btn">Start New Simulation</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Gantt Chart and Visualization -->
+        <div class="panel right">
+            <div><h3 class="rr-text">Round Robin</h3></div>
+            <div class="panel actual-gantt">
+                <h3 class="gantt-text">Gantt Chart</h3>
+                <div id="viz-container">
+                    <div id="gantt-row"></div>
+                </div>
+            </div>
+
+            <!-- Upper Gantt Chart (Process Queue) -->
+            <div class="panel upper-gantt">
+                <h3>Process Queue</h3>
+                <div id="upper-gantt-row"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Comparison Chart Container -->
+    <div class="performance-panel">
+        <h3>Performance Comparison</h3>
+        <div id="performance-chart-container" style="width: 100%; height: 400px;"></div>
+    </div>
+
+    <!-- Process Queue Table -->
+    <div class="process-panel">
+        <h3>Process Queue</h3>
+        <table id="job-table">
+            <thead>
+                <tr>
+                    <th>Process ID</th>
+                    <th>Burst Time</th>
+                    <th>Time Quantum</th>
+                    <th>Arrival Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Simulation Results Table -->
+    <div class="result-panel">
+        <h3>Simulation Results</h3>
+        <table id="result-table">
+            <thead>
+                <tr>
+                    <th>Process ID</th>
+                    <th>Burst Time</th>
+                    <th>Response Time</th>
+                    <th>Completion Time</th>
+                    <th>Turn Around Time</th>
+                    <th>Waiting Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+    <!-- Average Metrics -->
+    <div class="panel">
+        <h3>Average Metrics</h3>
+        <div id="avg-tat">Average Turn Around Time: <span>0</span></div>
+        <div id="avg-wt">Average Waiting Time: <span>0</span></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ScheduLearn. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/js/rrscript.js"></script>
+</body>
+</html>

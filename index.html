@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScheduLearn: OS Scheduling Algorithms</title>
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/algo-style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        
+        
+        <div class="dropdown">
+            <button class="dropbtn">Scheduling Algorithm
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="../templates/sjf.html">Shortest Job First</a>
+              <a href="../templates/fcfs.html">First Come First Serve</a>
+              <a href="../templates/round_robin.html">Round Robin</a>
+              <a href="../templates/ps.html">Priority Scheduling</a>
+              <a href="../templates/ba.html">Banker's Algorithm</a>
+              <a href="..templates/mq.html">Multilevel Queue</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn2">Sorting Algorithm
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Bubble Sort</a>
+              <a href="#">Selection Sort</a>
+              <a href="#">Insertion Sort</a>
+              <a href="#">Merge Sort</a>
+              <a href="#">Quick Sort</a>
+              <a href="#">Counting Sort</a>
+            </div>
+        </div>
+        <a href="#">Linked List</a>
+        <a href="#">Graph</a>
+        <a href="#">Tree</a>
+        <a href="../templates/contactus.html" style="float:right; margin-right:20px;">Contact</a>
+    </div>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>ScheduLearn</h1>
+            <p>Where Learning Meets Scheduling Simplicity</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="card-container">
+            <div class="card" onclick="navigateTo('templates/sjf.html')">
+                <h3>Shortest Job First (SJF)</h3>
+                <p>Visualize the SJF scheduling algorithm with demo and dynamic inputs.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('templates/fcfs.html')">
+                <h3>First Come First Serve (FCFS)</h3>
+                <p>Understand the basics of FCFS scheduling through interactive visualization.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('templates/round_robin.html')">
+                <h3>Round Robin (RR)</h3>
+                <p style="padding-top: 40px;">Explore time-slice based scheduling using Round Robin Algorithm.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('templates/ps.html')">
+                <h3>Priority Scheduling</h3>
+                <p style="padding-top: 40px;">Learn how priority-based job scheduling works dynamically.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('templates/mq.html')">
+                <h3>Multilevel Queue Scheduling</h3>
+                <p>Dive into multilevel queue scheduling concepts with visual examples.</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('templates/ba.html')">
+                <h3>Banker's Algorithm</h3>
+                <p>Understand the Banker's Algorithm and how it ensures safe resource allocation with interactive visualizations.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ScheduLearn. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Navigate to the selected algorithm page
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+
+</html>

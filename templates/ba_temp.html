@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banker's Algorithm</title>
+    <link rel="stylesheet" href="../static/css/algo-style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Scheduling Algorithm</button>
+            <div class="dropdown-content">
+                <a href="sjf.html">Shortest Job First</a>
+                <a href="fcfs.html">First Come First Serve</a>
+                <a href="round_robin.html">Round Robin</a>
+                <a href="ps.html">Priority Scheduling</a>
+                <a href="ba.html">Banker's Algorithm</a>
+                <a href="mq.html">Multilevel Queue</a>
+            </div>
+        </div>
+        <a href="contact.html" style="float:right; margin-right:20px;">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="panel left">
+            <div id="actions">
+                <div class="addproc">Add Process</div>
+                <div id="add-job-input">
+                    <input type="text" id="process-id" placeholder="Process ID (e.g., P0)" value="P0">
+                    
+                    <div class="resource-inputs">
+                        <h4>Allocation</h4>
+                        <input type="number" id="alloc-a" placeholder="Resource A" min="0">
+                        <input type="number" id="alloc-b" placeholder="Resource B" min="0">
+                        <input type="number" id="alloc-c" placeholder="Resource C" min="0">
+                    </div>
+
+                    <div class="resource-inputs">
+                        <h4>Maximum</h4>
+                        <input type="number" id="max-a" placeholder="Resource A" min="0">
+                        <input type="number" id="max-b" placeholder="Resource B" min="0">
+                        <input type="number" id="max-c" placeholder="Resource C" min="0">
+                    </div>
+
+                    <button id="add-process-btn">Add Process</button>
+                    <button id="simulate-btn">Check Safety</button>
+                    <button id="start-new-simulation-btn">Start New Simulation</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel right">
+            <h2>Banker's Algorithm Simulation</h2>
+            
+            <div class="process-panel">
+                <h3>Process Table</h3>
+                <table id="process-table">
+                    <thead>
+                        <tr>
+                            <th>Process</th>
+                            <th colspan="3">Allocation (A B C)</th>
+                            <th colspan="3">Maximum (A B C)</th>
+                            <th colspan="3">Available (A B C)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="result-panel">
+                <h3>Safety Sequence</h3>
+                <div id="safety-sequence"></div>
+                <div id="execution-steps"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/ba.js"></script>
+</body>
+</html>

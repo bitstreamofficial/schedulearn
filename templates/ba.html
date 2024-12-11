@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banker's Algorithm Visualization</title>
+    <link rel="stylesheet" href="../static/css/algo-style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        
+        
+        <div class="dropdown">
+            <button class="dropbtn">Scheduling Algorithm
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/templates/sjf.html">Shortest Job First</a>
+              <a href="fcfs.html">First Come First Serve</a>
+              <a href="round_robin.html">Round Robin</a>
+              <a href="ps.html">Priority Scheduling</a>
+              <a href="ba.html">Banker's Algorithm</a>
+              <a href="mq.html">Multilevel Queue</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn2">Sorting Algorithm
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Bubble Sort</a>
+              <a href="#">Selection Sort</a>
+              <a href="#">Insertion Sort</a>
+              <a href="#">Merge Sort</a>
+              <a href="#">Quick Sort</a>
+              <a href="#">Counting Sort</a>
+            </div>
+        </div>
+        <a href="#">Linked List</a>
+        <a href="#">Graph</a>
+        <a href="#">Tree</a>
+        <a href="../templates/contactus.html" style="float:right; margin-right:20px;">Contact</a>
+    </div>
+    <div class="container">
+        <div class="panel left">
+            <div id="actions">
+                <div class="addproc">Add Process</div>
+                <div id="add-job-input">
+                    <input type="text" id="job-name" value="P1" placeholder="Process ID">
+                    <input type="text" id="max-resources" placeholder="Max Resources">
+                    <input type="text" id="allocated-resources" placeholder="Allocated Resources">
+                    <input type="text" id="available-resources" placeholder="Available Resources">
+                    <button id="add-job-btn">Add Job</button>
+                    <button id="simulate-btn">Simulate Banker's</button>
+                    <button id="start-new-simulation-btn">Start New Simulation</button>
+                    <p style="color:#ffcc00;">N.B: *insert 3 values with comma-separated</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel right">
+            <div>
+                <h2 class="rr-text">Banker's Algorithm</h2>
+            </div>
+            <div class="panel actual-gantt">
+                <h3 class="gantt-text">Safe Sequence</h3>
+                <div id="viz-container">
+                    <div id="gantt-row"></div>
+                </div>
+            </div>
+            <div class="panel upper-gantt">
+                <h3>Process Queue</h3>
+                <div id="upper-gantt-row"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-panel">
+        <h3>Process Queue</h3>
+        <table id="job-table">
+            <thead>
+                <tr>
+                    <th>Process ID</th>
+                    <th>Max Resources</th>
+                    <th>Allocated Resources</th>
+                    <th>Available Resources</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="result-panel">
+        <h3>Simulation Results</h3>
+        <table id="result-table">
+            <thead>
+                <tr>
+                    <th>Process ID</th>
+                    <th>Allocated Resources</th>
+                    <th>Sequence Order</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="panel">
+        <h3>Average Metrics</h3>
+        <div id="avg-tat">Safe Sequence: <span>-</span></div>
+        <div id="avg-wt">State: <span>Safe</span></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ScheduLearn. All rights reserved.</p>
+    </footer>
+    <script src="../static/js/ba.js"></script>
+</body>
+</html>
